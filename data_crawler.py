@@ -88,7 +88,7 @@ def crawlData(args):
 
 
 checkDir(DATA_DIRS)
-NUM_SAMPLES = 10
+NUM_SAMPLES = 300
 params = [(src, NUM_SAMPLES) for src in urls.keys()]
 with concurrent.futures.ThreadPoolExecutor(max_workers=len(params)) as executor:
     executor.map(crawlData, params)
